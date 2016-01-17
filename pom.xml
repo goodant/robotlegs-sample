@@ -1,0 +1,124 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.robotlegs</groupId>
+    <artifactId>robotlegs-gallery</artifactId>
+    <version>1.0-sample</version>
+    <packaging>swf</packaging>
+
+     <properties>
+        <flexmojos.version>7.0.1</flexmojos.version>
+        <flex.version>4.13.0.20140701</flex.version>
+        <flash.version>15.0</flash.version>
+        <jetty.version>9.3.2.v20150730</jetty.version>
+    </properties>
+
+    <build>
+        <!--<finalName>docViewer</finalName>-->
+
+        <!-- Tell Maven to use src/main/flex instead of the default src/main/java -->
+        <sourceDirectory>src</sourceDirectory>
+
+
+        <!-- Configure the plugin -->
+        <plugins>
+
+            <plugin>
+                <groupId>net.flexmojos.oss</groupId>
+                <artifactId>flexmojos-maven-plugin</artifactId>
+                <version>${flexmojos.version}</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <sourceFile>robotlegs_sample.mxml</sourceFile>
+                    <storepass />
+                    <localesSourcePath>${project.build.directory}/classes/locale/{locale}</localesSourcePath>
+                    <flexBuilderCompatibility>true</flexBuilderCompatibility>
+                    <allowSourcePathOverlap>true</allowSourcePathOverlap>
+                </configuration>
+                <dependencies>
+                    <!-- This handles a bug in maven which causes problems with flex resources -->
+                    <dependency>
+                        <groupId>net.flexmojos.oss</groupId>
+                        <artifactId>flexmojos-threadlocaltoolkit-wrapper
+                        </artifactId>
+                        <version>${flexmojos.version}</version>
+                    </dependency>
+                    <!-- Without this FM will use the compiler configured in its
+                    master pom, which will result in version conflicts -->
+                    <dependency>
+                        <groupId>org.apache.flex</groupId>
+                        <artifactId>compiler</artifactId>
+                        <version>${flex.version}</version>
+                        <type>pom</type>
+                    </dependency>
+                </dependencies>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.4</version>
+            </plugin>
+            
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>${jetty.version}</version>
+                <configuration>
+                    <!--<jettyXml>${project.basedir}/src/test/resources/jetty.xml</jettyXml>-->
+                    <webAppSourceDirectory>${project.basedir}/src/test/webapp</webAppSourceDirectory>
+                    <useTestScope>true</useTestScope>
+                    <contextHandlers>
+                        <contextHandler implementation="org.eclipse.jetty.webapp.WebAppContext">
+                            <contextPath>/target/</contextPath>
+                            <resourceBase>target/</resourceBase>
+                        </contextHandler>
+                    </contextHandlers>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.tuckey</groupId>
+                        <artifactId>urlrewritefilter</artifactId>
+                        <version>4.0.3</version>
+                        <type>jar</type>
+                        <scope>runtime</scope>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-webdav</artifactId>
+                <version>1.0-beta-2</version>
+            </extension>
+        </extensions>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.flex.framework</groupId>
+            <artifactId>flex-framework</artifactId>
+            <version>${flex.version}</version>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.flash.framework</groupId>
+            <artifactId>playerglobal</artifactId>
+            <version>${flash.version}</version>
+            <type>swc</type>
+        </dependency>
+		<dependency>
+			<groupId>org.robotlegs.local</groupId>
+			<artifactId>robotlegs-framework</artifactId>
+			<version>1.5.2</version>
+			<type>swc</type>
+		</dependency>
+		<dependency>
+			<groupId>my.templates.local</groupId>
+			<artifactId>templates</artifactId>
+			<version>1.0</version>
+			<type>swc</type>
+		</dependency>
+		
+    </dependencies>
+</project>

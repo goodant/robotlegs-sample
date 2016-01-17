@@ -1,0 +1,16 @@
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Maven Stub Project (No POM) 1
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install-file (default-cli) @ standalone-pom ---
+[INFO] Installing G:\Alex_jobs\2016-01-11_Robotlegs\robotlegs_sample\src\libs\templates.swc to C:\Users\user\.m2\repository\my\templates\local\templates\1.0\templates-1.0.swc
+[INFO] Installing C:\Users\user\AppData\Local\Temp\mvninstall5986353633779413792.pom to C:\Users\user\.m2\repository\my\templates\local\templates\1.0\templates-1.0.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 0.942 s
+[INFO] Finished at: 2016-01-17T20:09:41+02:00
+[INFO] Final Memory: 6M/81M
+[INFO] ------------------------------------------------------------------------

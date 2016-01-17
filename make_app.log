@@ -1,0 +1,49 @@
+[INFO] Error stacktraces are turned on.
+[INFO] Scanning for projects...
+[WARNING] The POM for org.apache.flex:compiler:pom:4.12.1.20140427 is missing, no dependency information available
+[WARNING] The POM for org.apache.flex.compiler:mxmlc:jar:4.12.1.20140427 is missing, no dependency information available
+[WARNING] The POM for org.apache.flex.compiler:digest:jar:4.12.1.20140427 is missing, no dependency information available
+[WARNING] The POM for org.apache.flex.compiler:optimizer:jar:4.12.1.20140427 is missing, no dependency information available
+[WARNING] The POM for org.apache.flex.compiler:asdoc:jar:4.12.1.20140427 is missing, no dependency information available
+[WARNING] The POM for org.apache.flex.compiler:swcdepends:jar:4.12.1.20140427 is missing, no dependency information available
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building robotlegs-gallery 1.0-sample
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:resources (default-resources) @ robotlegs-gallery ---
+[WARNING] Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\Alex_jobs\2016-01-11_Robotlegs\robotlegs_sample\src\main\resources
+[INFO] 
+[INFO] --- flexmojos-maven-plugin:7.0.1:compile-swf (default-compile-swf) @ robotlegs-gallery ---
+[INFO] Flexmojos 7.0.1
+[INFO] 	 GPL License - Version 2.0 (NO WARRANTY) - See COPYRIGHT file
+[WARNING] No themes are explicitly defined in the <theme> section or in any scope="theme" dependencies. Flexmojos is now attempting to figure out which themes to include. (to avoid this warning you should explicitly state your theme dependencies)
+[WARNING] Adding spark theme because spark.swc was included as a dependency
+[INFO] Writing configuration dump to G:\Alex_jobs\2016-01-11_Robotlegs\robotlegs_sample\target\robotlegs-gallery-1.0-sample-configs.xml
+[INFO] G:\Alex_jobs\2016-01-11_Robotlegs\robotlegs_sample\target\robotlegs-gallery-1.0-sample.swf (284302 bytes)
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:testResources (default-testResources) @ robotlegs-gallery ---
+[WARNING] Using platform encoding (Cp1251 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\Alex_jobs\2016-01-11_Robotlegs\robotlegs_sample\src\test\resources
+[INFO] 
+[INFO] --- flexmojos-maven-plugin:7.0.1:test-compile (default-test-compile) @ robotlegs-gallery ---
+[INFO] Flexmojos 7.0.1
+[INFO] 	 GPL License - Version 2.0 (NO WARRANTY) - See COPYRIGHT file
+[INFO] Skipping compiler, test source path doesn't exist.
+[INFO] 
+[INFO] --- flexmojos-maven-plugin:7.0.1:test-run (default-test-run) @ robotlegs-gallery ---
+[INFO] Flexmojos 7.0.1
+[INFO] 	 GPL License - Version 2.0 (NO WARRANTY) - See COPYRIGHT file
+[INFO] Skipping test run. Runner not found: G:\Alex_jobs\2016-01-11_Robotlegs\robotlegs_sample\target\test-classes
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ robotlegs-gallery ---
+[INFO] Installing G:\Alex_jobs\2016-01-11_Robotlegs\robotlegs_sample\target\robotlegs-gallery-1.0-sample.swf to C:\Users\user\.m2\repository\org\robotlegs\robotlegs-gallery\1.0-sample\robotlegs-gallery-1.0-sample.swf
+[INFO] Installing G:\Alex_jobs\2016-01-11_Robotlegs\robotlegs_sample\pom.xml to C:\Users\user\.m2\repository\org\robotlegs\robotlegs-gallery\1.0-sample\robotlegs-gallery-1.0-sample.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 30.849 s
+[INFO] Finished at: 2016-01-17T20:58:50+02:00
+[INFO] Final Memory: 18M/266M
+[INFO] ------------------------------------------------------------------------
